@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('volunteer_name');
             $table->string('volunteer_email');
             $table->string('volunteer_password');
-            $table->string('volunteer_img');
+            $table->string('volunteer_img')->default('avatar.png');
             $table->timestamps();
         });
     }

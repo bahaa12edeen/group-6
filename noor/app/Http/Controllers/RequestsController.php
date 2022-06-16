@@ -12,7 +12,7 @@ class RequestsController extends Controller
         $insert = new requests;
         $insert->req_title = $request->input('req_title');
         $insert->req_txt = $request->input('req_txt');
-        $insert->volunteer_id = 1;
+        // $insert->volunteer_id = 1;
         $insert->user_id = 1;
         $insert->save();
         

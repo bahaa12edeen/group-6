@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('book_name');
             $table->string('book_description');
             $table->string('book_author');
-            $table->string('book_image');
-            $table->string('book_file');
+            $table->string('book_image')->default('ask.jpg');
+            $table->string('book_file')->default('file_example_MP3_1MG.mp3');
             $table->string('volunteer_id');
             $table->timestamps();
         });

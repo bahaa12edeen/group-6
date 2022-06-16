@@ -23,6 +23,11 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style>
+    .table td, .table th {
+    padding: 0.9375rem 1.4rem !important;
+}
+</style>
 </head>
 
 <body>
@@ -75,7 +80,7 @@
                 <!-- End Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                    <h3 style="color: white; margin-left:2%; margin-top:1%;">Services</h3>
+                    <h3 style="color: white; margin-left:2%; margin-top:1%;">Books</h3>
                     <ul class="navbar-nav d-none d-md-block d-lg-none">
                         <li class="nav-item">
                             <a class="nav-toggler nav-link waves-effect waves-light text-white"
@@ -201,7 +206,7 @@
                         <div class="white-box">
                             <div class="row align-items-center">
                                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 mb-5">
-                                    <h3 class="box-title">Services Records</h3> 
+                                    <h3 class="box-title">Books Records</h3> 
                                 </div>
                                 <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 mb-5">
                                     <div class="d-md-flex">
@@ -217,9 +222,11 @@
                                     <thead>
                                         <tr>
                                             <th class="border-top-0">#ID</th>
-                                            <th class="border-top-0">Servisce</th>
-                                            <th class="border-top-0">Poster</th>
-                                            <th class="border-top-0">Cost (JOD)</th>
+                                            <th class="border-top-0">Name</th>
+                                            <th class="border-top-0">Author</th>
+                                            <th class="border-top-0">Description</th>
+                                            <th class="border-top-0">Image</th>
+                                            <th class="border-top-0">File</th>
                                             <th class="border-top-0">Edit</th>
                                             <th class="border-top-0">Delete</th>
                                         </tr>
@@ -229,9 +236,9 @@
                                         <tr>
                                             <td>{{$item->book_id }}</td>
                                             <td>{{$item->book_name}}</td>
-                                            <td style="width:30%;">
-            <img src="images/services/{{ $item->book_image }}" width="20%" alt="service img"></td>
                                             <td>{{$item->book_author}}</td>
+                                            <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{$item->book_description}}</td>
+                                            <td style="width:30%;"><img src="{{ asset('/files/'.$item->book_image) }}" width="75px" alt=""></td>
                                             <td>{{$item->book_file}}</td>
                                             <td><a href="AdminEditSer/{{$item->book_id}}">Edit</a></td>
                                             <td><a href="AdminDeleteSer/{{$item->book_id}}">Delete</a></td>

@@ -14,16 +14,15 @@
     <title>NOOR Admin</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image" sizes="16x16" href="">
-    <!-- Custom CSS -->
-    <link href="admin/plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="admin/plugins/images/favicon.png">
     <!-- Custom CSS -->
     <link href="admin/css/style.min.css" rel="stylesheet">
-    {{-- jquery --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" integrity="sha512-vBmx0N/uQOXznm/Nbkp7h0P1RfLSj0HQrFSzV8m7rOGyj30fYAOKHYvCNez+yM8IrfnW0TCodDEjRqf6fodf/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    {{-- end jquery --}}
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 
 <body>
@@ -50,15 +49,15 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand" href="/AdminDashboard" style="align-items: center; justify-content: center;">
+                    <a class="navbar-brand" href="/AdminDashboard">
                         <!-- Logo icon -->
-                        <b class="logo-icon" style="display: flex; align-items: center;">
+                        <b class="logo-icon">
                             <!-- Dark Logo icon -->
                             <img src="{{ asset('img/logo/a1.png') }}" width="80px" alt="homepage" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
-                        <span class="logo-text" style="display: flex; align-items: center; justify-content: center;">
+                        <span class="logo-text">
                             <!-- dark Logo text -->
                             <h3 style="color: rgba(0,0,0,.4); margin: 0;">NOOR</h3>
                         </span>
@@ -76,14 +75,20 @@
                 <!-- End Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                    <h3 style="color: white; margin-left:2%; margin-top:1%;">Dashboard</h3>
+                    <h3 style="color: white; margin-left:2%; margin-top:1%;">Volunteers</h3>
+                    <ul class="navbar-nav d-none d-md-block d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-toggler nav-link waves-effect waves-light text-white"
+                                href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                        </li>
+                    </ul>
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
                     <ul class="navbar-nav ms-auto d-flex align-items-center">
                         <li>
                             <a class="profile-pic" href="/AdminLogin">
-                            <span class="text-white font-medium">Logout</span></a>
+                                <span class="text-white font-medium">Logout</span></a>
                         </li>
                     </ul>
                 </div>
@@ -157,9 +162,8 @@
             {{-- <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard</h4>
+                        <h4 class="page-title">Basic Table</h4>
                     </div>
-                    
                 </div>
                 <!-- /.col-lg-12 -->
             </div> --}}
@@ -171,115 +175,63 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <!-- ============================================================== -->
-                <!-- Three charts -->
-                <!-- ============================================================== -->
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Total Number of Users</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <li>
-                                    <a href="AdminUsers" class="counter text-success" style="font-size: large">View Users</a>
-                                </li>
-                                <li class="ms-auto"><span class="counter text-success"><?php echo $usersCount; ?></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Total Number of Books</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <li>
-                                    <a href="AdminServices" class="counter text-purple" style="font-size: large">View Books</a>
-                                </li>
-                                <li class="ms-auto"><span class="counter text-purple"><?php echo $booksCount; ?></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Total Number of Blogs</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <li>
-                                    <a href="AdminReservations" class="counter text-info" style="font-size: large">View blogs</a>
-                                </li>
-                                <li class="ms-auto"><span class="counter text-info"><?php echo $blogsCount; ?></span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- PRODUCTS YEARLY SALES -->
+                <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Yearly Provided Services</h3>
-                            <div class="d-md-flex">
-                                {{-- <ul class="list-inline d-flex ms-auto">
-                                    <li class="ps-3">
-                                        <h5><i class="fa fa-circle me-1 text-info"></i>Paid</h5>
-                                    </li>
-                                    <li class="ps-3">
-                                        <h5><i class="fa fa-circle me-1 text-inverse"></i>Unpaid</h5>
-                                    </li>
-                                </ul> --}}
-                            </div>
-                            <div id="ct-visits" style="height: 405px;">
-                                <div class="chartist-tooltip" style="top: -17px; left: -12px;"><span
-                                        class="chartist-tooltip-value">6</span>
-                                </div>
+                            <h3 class="box-title">Volunteers Records</h3>
+                            {{-- <p class="text-muted">Add class <code>.table</code></p> --}}
+                            <div class="table-responsive">
+                                <table class="table text-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">#ID</th>
+                                            <th class="border-top-0">Name</th>
+                                            <th class="border-top-0">Email</th>
+                                            <th class="border-top-0">Image</th>
+                                            <th class="border-top-0">Edit</th>
+                                            <th class="border-top-0">Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($data as $item)
+                                            {{-- Org. --}}
+
+                                            {{-- reservation --}}
+                                            <tr>
+                                                <td>{{ $item->volunteer_id  }}</td>
+                                                <td>{{ $item->volunteer_name }}</td>
+                                                <td> {{ $item->volunteer_email }}</td>
+                                                <td><img src="{{ asset('/files/'.$item->volunteer_img) }}" width="75px" alt=""></td>
+                                                <td><a href="AdminEditSer/">Edit</a></td>
+                                                <td><a href="AdminDeleteSer/">Delete</a></td>    
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                {{-- Chart///////////////////////////////////////////////////// --}}
-                {{-- <div style="width:900px; height:400px; margin:auto;">
-                    <canvas id="barChart"></canvas>
-                </div>
-                <?php $datas= json_encode($datas); ?>
-                <script>
-                    $(function(){
-                        var datas=<?=$datas?>;
-                        var barCanvas= $("#barChart");
-                        var barChart= new Chart(barCanvas,{
-                            type:'bar';
-                            data:{
-                                labels:['Service1', 'Service2', 'Service3'],
-                                datasets:[
-                                    {
-                                        label: 'Count Of Users',
-                                        data: datas,
-                                        backgroundColor:['red','yellow','green']
-                                    }
-                                ]
-                            },
-                            options:{
-                                scales:{
-                                    yAxes:[{
-                                        ticks:{
-                                            beginAtZero:true
-                                        }
-                                    }]
-                                }
-                            }
-                        });
-                    })
-                </script> --}}
-
-
-
-
-                
-                {{-- end chart ///////////////////////////////////////////////// --}}
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> Copyright NOOR © 2022. All rights reserved.
+            <footer class="footer text-center">Copyright NOOR © 2022. All rights reserved.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
@@ -299,18 +251,12 @@
     <!-- Bootstrap tether Core JavaScript -->
     <script src="admin/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="admin/js/app-style-switcher.js"></script>
-    <script src="admin/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
     <!--Wave Effects -->
     <script src="admin/js/waves.js"></script>
     <!--Menu sidebar -->
     <script src="admin/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="admin/js/custom.js"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
-    <script src="admin/plugins/bower_components/chartist/dist/chartist.min.js"></script>
-    <script src="admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="admin/js/pages/dashboards/dashboard1.js"></script>
 </body>
 
 </html>

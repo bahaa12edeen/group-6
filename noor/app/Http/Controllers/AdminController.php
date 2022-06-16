@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\book;
 use App\Models\User;
 
-use App\Models\blog;
+use App\Models\blog1;
 
 class AdminController extends Controller
 {
@@ -15,7 +15,7 @@ class AdminController extends Controller
     public function viewDashboard(){
         $usersCount = DB::table('users')->count();
         $booksCount = DB::table('books')->count();
-        $blogsCount = DB::table('blogs')->count();
+        $blogsCount = DB::table('blog1s')->count();
 
         return view('Admin.dashboard',['usersCount'=>$usersCount,'booksCount'=>$booksCount,'blogsCount'=>$blogsCount]);
     }
@@ -134,7 +134,7 @@ class AdminController extends Controller
 
 
     public function viewBlogs(){
-        $data = DB::select('select * from blogs');
+        $data = DB::select('select * from blog1s');
         return view('Admin.AdminBlog',['data'=>$data]);
     }
 
@@ -143,4 +143,8 @@ class AdminController extends Controller
         return view('Admin.AdminBook', ['data'=>$data]);
     }
 
+    public function viewVolunteers(){
+        $data = DB::select('select * from volunteers');
+        return view('Admin.AdminVolunteers', ['data'=>$data]);
+    }
 }

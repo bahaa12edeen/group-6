@@ -30,10 +30,14 @@
               </button> --}}
                     <div class="input-group rounded">
 
-                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                        <input type="text" name="search" class="form-control rounded" placeholder="Search" aria-label="Search"
                             aria-describedby="search-addon" /> &nbsp;&nbsp;
                         <span class="input-group-text border-0" id="search-addon">
+            <button type="submit" style="border: 0;">
+
                             <i class="fas fa-search"></i>
+            </button>
+
                         </span>
                     </div>
             </div>
@@ -61,12 +65,13 @@
             @foreach ($data as $item)
                 <div class="col-sm-4 col-md-4 col-sm-4">
                     <div class="card mb-5 shadow-sm">
-                        <img style="height:70%" src="/files/{{ $item->book_image }}" class="img-fluid" />
+                        <img style="height: 400px;" src="/files/{{ $item->book_image }}" class="img-fluid" />
 
                         <div class="card-body">
                             <div class="card-title">
-                                <h2 style="text-align: center">{{ $item->book_name }}</h2>
-                                <h4><i class="fa-solid fa-feather-pointed"></i>{{ $item->book_author }}</h4>
+                                <h3 style="text-align: center; font-size: 19px;">{{ $item->book_name }}</h3>
+                                <h4 style="font-size: 17px;"><i
+                                        class="fa-solid fa-feather-pointed"></i>{{ $item->book_author }}</h4>
                             </div>
                             <div class="card-text">
                                 <p>
@@ -189,8 +194,8 @@
             </div>
             <!--Modal: Name-->
 
-            <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-4.webp" alt="video"
-                    data-toggle="modal" data-target="#modal2"></a>
+            <a><img class="img-fluid z-depth-1" src="{{ asset('/files/p1.jpeg') }}" alt="video" data-toggle="modal"
+                    data-target="#modal2"></a>
 
         </div>
         <!-- Grid column -->
@@ -229,8 +234,8 @@
             </div>
             <!--Modal: Name-->
 
-            <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-5.webp" alt="video"
-                    data-toggle="modal" data-target="#modal5"></a>
+            <a><img class="img-fluid z-depth-1" src="{{ asset('/files/p2.jpeg') }}" alt="video" data-toggle="modal"
+                    data-target="#modal5"></a>
 
         </div>
         <!-- Grid column -->
@@ -279,8 +284,8 @@
             </div>
             <!--Modal: Name-->
 
-            <a><img class="img-fluid z-depth-1" src="https://mdbootstrap.com/img/screens/yt/screen-video-6.webp" alt="video"
-                    data-toggle="modal" data-target="#modal3"></a>
+            <a><img class="img-fluid z-depth-1" src="{{ asset('/files/p3.jpeg') }}" alt="video" data-toggle="modal"
+                    data-target="#modal3"></a>
 
         </div>
         <!-- Grid column -->

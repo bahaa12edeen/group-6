@@ -41,7 +41,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">services</a>
                     <div class="dropdown-menu rounded-0 m-0">
-                        <a href="{{ url('book') }}" class="dropdown-item" style="color: black;">Bodcaste Book</a>
+                        <a href="{{ url('book') }}" class="dropdown-item" style="color: black;">Podcast Book</a>
                         <a href="{{ url('index') }}" class="dropdown-item" style="color: black;">Blog</a>
                         {{-- <a href="./team.html" class="dropdown-item">toolss</a> --}}
 

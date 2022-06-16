@@ -49,7 +49,7 @@ Route::get('/ask', [RequestsController::class, 'displayAsk']);
 Route::view('/respond', 'respond');
 
 Route::post('/respond/send', [RequestsController::class, 'responder']);
- 
+
 Route::get('/book', [BookController::class, 'index']);
 
 Route::get('/book/seaech', [BookController::class, 'GetBook']);
@@ -92,3 +92,5 @@ Route::post('/AdminLoginCheck', [AdminController::class, 'Login']);
 
 Route::get('/AdminBooks', [AdminController::class, 'viewBooks']);
 Route::get('/AdminBlogs', [AdminController::class, 'viewBlogs']);
+Route::get('/AdminVolunteers', [AdminController::class, 'viewVolunteers']);
+

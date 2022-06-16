@@ -75,7 +75,7 @@
                 <!-- End Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                    <h3 style="color: white; margin-left:2%; margin-top:1%;">Reservations</h3>
+                    <h3 style="color: white; margin-left:2%; margin-top:1%;">Blogs</h3>
                     <ul class="navbar-nav d-none d-md-block d-lg-none">
                         <li class="nav-item">
                             <a class="nav-toggler nav-link waves-effect waves-light text-white"
@@ -180,18 +180,19 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Reservations Records</h3>
+                            <h3 class="box-title">Blogs Records</h3>
                             {{-- <p class="text-muted">Add class <code>.table</code></p> --}}
                             <div class="table-responsive">
                                 <table class="table text-nowrap">
                                     <thead>
                                         <tr>
                                             <th class="border-top-0">#ID</th>
-                                            <th class="border-top-0">User</th>
-                                            <th class="border-top-0">Service</th>
-                                            <th class="border-top-0">Cost (JOD)</th>
-                                            <th class="border-top-0">City</th>
-                                            <th class="border-top-0">Address</th>
+                                            <th class="border-top-0">Title</th>
+                                            <th class="border-top-0">Content</th>
+                                            <th class="border-top-0">Image</th>
+                                            {{-- <th class="border-top-0">User Name</th> --}}
+                                            <th class="border-top-0">Edit</th>
+                                            <th class="border-top-0">Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -201,11 +202,12 @@
                                             {{-- reservation --}}
                                             <tr>
                                                 <td>{{ $item->blog_id }}</td>
-                                                <td>{{ $item->text }} {{ $item->img }}</td>
-                                                <td>{{ $item->user_id }}</td>
-                                                {{-- <td></td>
-                                                <td>{{ $item->city }}</td>
-                                                <td>{{ $item->address }}</td> --}}
+                                                <td>{{ $item->title }}</td>
+                                                <td style="max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $item->text }}</td>
+                                                <td><img src="{{ asset('/img/'.$item->img) }}" width="75px" alt=""></td>
+                                                {{-- <td>{{ $item->user_id }}</td> --}}
+                                                <td><a href="AdminEditSer/">Edit</a></td>
+                                                <td><a href="AdminDeleteSer/">Delete</a></td>    
                                             </tr>
                                         @endforeach
                                     </tbody>

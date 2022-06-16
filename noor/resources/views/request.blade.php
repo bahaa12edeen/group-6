@@ -41,9 +41,8 @@
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5" >
-            <form id="contact-form"  name="contact-form" action="" method="post" enctype="multipart/form-data" style="justify-content: center">
+            <form id="contact-form"  name="contact-form" action="request/send" method="get" style="justify-content: center">
                 @csrf
-                @method('PUT')
                 <!--Grid row-->
                 <div class="row ml-5" >
                     <!--Grid column-->
@@ -55,14 +54,12 @@
                             <label for="message" style="color: white">Your request</label>
                             <textarea type="text" id="req_txt" name="req_txt" rows="2" class="form-control md-textarea"></textarea>
                         </div>
-           <div class="text-center text-md-left mt-3">
+            <div class="text-center text-md-left mt-3">
                 <a class="btn btn-primary"  onclick="document.getElementById('contact-form').submit();">Send</a>
             </div>
                     </div>
                 </div>
-        <input type="text" name="user_id" value="user_id" disabled style="display: none;">
-
-
+                <input type="text" name="user_id" value="user_id" disabled style="display: none;">
             </form>
         </div>
     </div>

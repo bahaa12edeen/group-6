@@ -2,8 +2,7 @@
 
 @section('content')
     <br>
-    <br>
-    <br>
+    <br><br><br>
     <br>
     <main class="login-form" style="color: white ;   font-size: 18px; ">
         <video id="bgvid" playsinline autoplay muted loop style="position: absolute;
@@ -79,13 +78,13 @@
                             </form>
 
                         </div>
+                        <span>You don't have account: <a href="{{ url('registration') }}">register</a></span>
+
                     </div>
                 </div>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
+        <br><br><br>
         <br>
     </main>
 @endsection
