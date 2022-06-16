@@ -26,7 +26,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
- <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 <style>
 
 

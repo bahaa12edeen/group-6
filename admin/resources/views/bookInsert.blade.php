@@ -11,7 +11,10 @@
                 <h6 class="alert alert-success">{{ session('status') }}</h6>
             @endif --}}
 
-            <div class="card">
+            <div class="card" style="    border: 5px dashed #9bcaf2;
+            box-shadow: 20px 18px 30px #787473;
+            margin-left: 187px;
+        }">
                 <div class="card-header">
                     <h4>Add Book</h4>
                 </div>

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\VolunteerController;
+use App\Http\Controller\UserController;
 // use App\Http\Controllers\
 /*
 |--------------------------------------------------------------------------
@@ -15,14 +17,12 @@ use App\Http\Controllers\BookController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('index', function () {
     return view('index');
 });
-    Route::get('users', function () {
-        return view('users');
-    });
+
 
     Route::get('volunteers', function () {
         return view('volunteers');
@@ -37,6 +37,10 @@ Route::get('index', function () {
     Route::get('/bookInsert', function () {
         return view('bookInsert');
     });
+    Route::get('/volunteerInsert', function () {
+        return view('volunteerInsert');
+    });
+// ==============================================================================================Book
 
 
     Route::post('index/insert',[BookController::class,'insBook']);
@@ -52,3 +56,28 @@ Route::get('index', function () {
 
     Route::get('bookDelete/{id}', [BookController::class, 'destroy']);
     Route::view("show","bookUpdate");
+
+// ==============================================================================================volunteers
+
+    Route::get('volunteers',[VolunteerController::class,'fetchall']);#======>Show Data
+
+
+    Route::get('volunteer-add',[VolunteerController::class,'create']);#\\\\\\\\\\\\Insert
+    Route::post('volunteer-add',[VolunteerController::class,'store']);#////////////Data
+
+
+    Route::get('volunteers/{id}',[VolunteerController::class,'destroy']);#============>Delete
+
+    Route::get('/volunteer',[VolunteerController::class,'edit']);
+    Route::put('/volunteers',[VolunteerController::class,'update']);
+
+
+
+
+
+    // ==============================================================================================User
+
+    Route::get('/users',[UserController::class,'fetchallUser']);#======>Show Data
+
+
+

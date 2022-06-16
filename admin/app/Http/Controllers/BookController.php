@@ -14,7 +14,7 @@ class BookController extends Controller
         return view('book', compact('show'));
     }
 
-     public function insBook(Request $request){
+    public function insBook(Request $request){
         $img= $request->file('img');
         $imgname=$img->getClientOriginalName();
         $img-> move(public_path('files'), $imgname);

@@ -1,7 +1,33 @@
-<div class="container-fluid bg-light position-relative shadow">
-    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+<style>
+    *{
+        font-family: "Nunito", sans-serif !important;
+        letter-spacing: 1px;
+    }
+
+    i, h4 {
+        font-family: "Font Awesome 6 Free"!important;
+    }
+
+    .fab{
+        font-family: "Font Awesome 6 Brands"!important;
+    }
+
+    nav a{
+        color: white !important;
+        font-family: "cursive !important";
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .dropdown-item{
+        color: black !important;
+    }
+</style>
+
+<div class="container-fluid bg-light position-relative shadow" style="background-color: #054569 !important;">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5" style="background-color: #054569 !important; ">
         <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
-            <img width="120px" src="{{ asset('img/logo/a1.png') }}" alt="description of myimage">
+            <img width="120px" style="width: 120px;" src="{{ asset('img/logo/a1.png') }}" alt="description of myimage">
             <!-- <i class="fa-solid fa-eye"></i>
             <span class="text-primary">nOOr</span> -->
         </a>
@@ -13,10 +39,10 @@
                 <a href="{{ url('home') }}" class="nav-item nav-link active">Home</a>
                 <a href="{{ url('ask') }}" class="nav-item nav-link active">Asks</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Serves</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">services</a>
                     <div class="dropdown-menu rounded-0 m-0">
-                        <a href="{{ url('book') }}" class="dropdown-item">Bodcaste Book</a>
-                        <a href="{{ url('blog') }}" class="dropdown-item">Blog</a>
+                        <a href="{{ url('book') }}" class="dropdown-item" style="color: black;">Bodcaste Book</a>
+                        <a href="{{ url('index') }}" class="dropdown-item" style="color: black;">Blog</a>
                         {{-- <a href="./team.html" class="dropdown-item">toolss</a> --}}
 
                     </div>
@@ -28,3 +54,7 @@
         </div>
     </nav>
 </div>
+<script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
+{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> --}}
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> --}}

@@ -5,25 +5,14 @@
 @section('content')
     
 
-<!-- Header Start -->
-<div class="container-fluid bg-primary mb-5">
-    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-        <h3 class="display-3 font-weight-bold text-white">Contact Us</h3>
-        <div class="d-inline-flex text-white">
-            <p class="m-0"><a class="text-white" href="">Home</a></p>
-            <p class="m-0 px-2">/</p>
-            <p class="m-0">Contact Us</p>
-        </div>
-    </div>
-</div>
-<!-- Header End -->
+
 
 
 <!-- Contact Start -->
 <div class="container-fluid pt-5">
     <div class="container">
         <div class="text-center pb-2">
-            <p class="section-title px-5"><span class="px-2">Get In Touch</span></p>
+            {{-- <p class="section-title px-5"><span class="px-2">Get In Touch</span></p> --}}
             <h1 class="mb-4">Contact Us For Any Query</h1>
         </div>
         <div class="row">
@@ -90,7 +79,12 @@
 </div>
 <!-- Contact End -->
 
-
+<!--Google map-->
+<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+      style="border:0; width: 100%; height: 500px;" allowfullscreen></iframe>
+  </div>
+<!--Google Maps-->
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>

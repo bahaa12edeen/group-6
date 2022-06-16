@@ -1,0 +1,16 @@
+// Admin
+Route::get('/AdminDashboard',  [AdminController::class, 'viewDashboard']);
+Route::get('/AdminUsers',  [AdminController::class, 'viewUsers']);
+Route::get('/AdminServices', [AdminController::class, 'viewServices']);
+Route::get('/AdminReservations', [AdminController::class, 'viewReservations']);
+Route::get('/AdminAddSer', [AdminController::class, 'addServicePage']);
+Route::post('/AdminAddService', [AdminController::class, 'addService']);
+Route::get('/AdminEditSer/{id}', [AdminController::class, 'editServicePage']);
+Route::post('/AdminEditService/{id}', [AdminController::class, 'editService']);
+Route::get('/AdminDeleteSer/{id}', [AdminController::class, 'deleteService']);
+Route::get('/AdminEditUserPage/{id}', [AdminController::class, 'editUserPage']);
+Route::post('/AdminEditUser/{id}', [AdminController::class, 'editUser']);
+Route::get('/AdminDeleteUser/{id}', [AdminController::class, 'deleteUser']);
+Route::get('/chart', [AdminController::class, 'barChart']);
+Route::get('/AdminLogin', [AdminController::class, 'viewLogin']);
+Route::post('/AdminLoginCheck', [AdminController::class, 'Login']);

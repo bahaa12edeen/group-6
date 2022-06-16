@@ -5,6 +5,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\AuthController;
 use App\http\Controllers\BlogController;
 use App\http\Controllers\RequestsController;
+use App\http\Controllers\AdminController;
 
 
 /*
@@ -65,3 +66,29 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/blog', [BlogController::class, 'displayBlog']);
 // Route::any('/image', [BlogController::class, 'storeimage']);
 Route::post('/blogg', [BlogController::class, 'addBlog']);
+
+Route::view('/index', 'index');
+Route::view('/post-1', 'post-1');
+Route::view('/post-2', 'post-2');
+Route::view('/post-3', 'post-3');
+Route::view('/post-4', 'post-4');
+
+
+// Admin
+Route::get('/AdminDashboard',  [AdminController::class, 'viewDashboard']);
+Route::get('/AdminUsers',  [AdminController::class, 'viewUsers']);
+// Route::get('/AdminServices', [AdminController::class, 'viewServices']);
+// Route::get('/AdminReservations', [AdminController::class, 'viewReservations']);
+// Route::get('/AdminAddSer', [AdminController::class, 'addServicePage']);
+// Route::post('/AdminAddService', [AdminController::class, 'addService']);
+// Route::get('/AdminEditSer/{id}', [AdminController::class, 'editServicePage']);
+// Route::post('/AdminEditService/{id}', [AdminController::class, 'editService']);
+// Route::get('/AdminDeleteSer/{id}', [AdminController::class, 'deleteService']);
+// Route::get('/AdminEditUserPage/{id}', [AdminController::class, 'editUserPage']);
+// Route::post('/AdminEditUser/{id}', [AdminController::class, 'editUser']);
+// Route::get('/AdminDeleteUser/{id}', [AdminController::class, 'deleteUser']);
+Route::get('/AdminLogin', [AdminController::class, 'viewLogin']);
+Route::post('/AdminLoginCheck', [AdminController::class, 'Login']);
+
+Route::get('/AdminBooks', [AdminController::class, 'viewBooks']);
+Route::get('/AdminBlogs', [AdminController::class, 'viewBlogs']);

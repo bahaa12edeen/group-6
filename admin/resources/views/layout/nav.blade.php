@@ -10,17 +10,17 @@
 <!--Main Navigation-->
 <header>
     <!-- Sidebar -->
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse " style="box-shadow: 0px 0px 70px -4px;  background-color: #cff4fc;">
       <div class="position-sticky">
         <div class="list-group list-group-flush mx-3 mt-4">
-          <a href="{{url('index')}} " class="list-group-item list-group-item-action py-2 ripple active" aria-current="true">
-            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
+          <a href="{{url('index')}} " class="list-group-item list-group-item-action py-2 ripple active" aria-current="true" style="    box-shadow: 0px 5px 11px 0px grey;">
+            <i class="fas fa-tachometer-alt fa-fw me-3 "></i><span>Main dashboard</span>
           </a>
-
+          <br>
         <!-- Volunteers Table  -->
 
           <a href="{{url('volunteers')}}" class="list-group-item list-group-item-action py-2 ">
-            <i class="fa-solid fa-handshake-angle"></i><span> Volunteers </span>
+            <i class="fa-solid fa-handshake-angle "></i><span> Volunteers </span>
           </a>
           
 
@@ -33,7 +33,7 @@
         <!--Book Table  -->
 
           <a href="{{url('book')}}" class="list-group-item list-group-item-action py-2 ripple"><i
-             class="fa-solid fa-book-open-reader"></i><span> BooK </span>
+             class="fa-solid fa-book-open-reader" ></i><span> BooK </span>
             </a>
 
             <!-- Uesr Table  -->
@@ -51,9 +51,9 @@
     <!-- Sidebar -->
 
     <!-- Navbar -->
-    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <nav id="main-navbar" class="navbar navbar-expand-lg  fixed-top">
       <!-- Container wrapper -->
-      <div class="container-fluid">
+      <div class="container-fluid" style="height:60px">
         <!-- Toggle button -->
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
           aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,9 +62,11 @@
 
         <!-- Brand -->
         <a class="navbar-brand" href="#">
-          <img src="/Untitled-2_0000_Layer 2 copy.png" height="45" alt="nOOr Logo"
+          <img src="{{url('https://cdn.discordapp.com/attachments/984432095038410752/984713996747808798/Untitled-2.png')}}" height="100" style="    margin-left: 33px;
+          margin-top: -30px;" alt="nOOr Logo"
             loading="lazy" />
-            <span class="text-warning">admin dashboard</span>
+        
+            <p style="    margin-left: 26px;margin-top: -35px;"><span style="color:#f8d576">Admin </span> <span style="color: #0753c8">dashboard </span> </p>
      
         </a>
         <!-- Search form -->

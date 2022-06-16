@@ -7,11 +7,12 @@
 
 <footer>
 
-    <div class="container">
+    <div class="container" >
         
            
-        <a href="{{url('bookInsert')}}" type="button" class="btn btn-primary" style="margin-left: 129px;margin-top:80px">Add Book</a>
-            <table class="table table-dark  ">
+        <a href="{{url('bookInsert')}}" type="button" class="btn btn-primary " style="margin-left: 1049px;margin-top: 83px; width:200px">Add Book</a>
+            <table class="table table-info table-striped" style=" margin-top: 2px;width: 1000px;margin-left: 248px; box-shadow: 10px 3px 15px grey;">
+        
                
 
                 <thead>
@@ -36,7 +37,7 @@
                     <td>{{$item->book_name}}</td>
                     <td>{{$item->book_description}}</td>
                     <td>{{$item->book_author}}</td>
-                    <td>{{$item->book_image}}</td>
+                    <td> <img src="/files/{{ ($item->book_image) }}" style="width:40px" />  </td>
                     <td>{{$item->book_file}}</td>
                     <td><a href="{{url('bookUpdate/'.$item->book_id)}}"type="button" class="btn btn-primary">Update</a></td>
                     <td><a href="{{url('bookDelete/'.$item->book_id)}}"type="button" class="btn btn-danger">Delete</a></td>
